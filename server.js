@@ -2,6 +2,7 @@ var express = require("express");
 
 //use the application off of express.
 var app = express();
+var path = require('path')
 
 //define the route for "/"
 app.get("/", function (request, response){
@@ -16,9 +17,27 @@ app.get("/index.html", function (request, response){
 
 app.get("/frontend/sign%20in/index.html", function (request, response){
     //show this file when the "/" is requested
+    const {spawn} = require('child_process');
+
+    let a = path.join(__dirname, 'code', 'PythonFunctionsReal.py')
+    const pyProg = spawn('py', [a]);
+    pyProg.stdin.setDefaultEncoding('utf-8')
+    console.log(pyProg.pid);
+
+    pyProg.stdout.on('data', function(data) {
+      console.log(data.toString());
+    })
+    pyProg.addListener('close', function (code){
+      console.log(code);
+      console.log(__dirname)
+    })
+});
+/*
+app.get("/frontend/sign%20in/index.html", function (request, response){
+    //show this file when the "/" is requested
     response.sendFile(__dirname+"/code/frontend/sign in/index.html");
 });
-
+*/
 app.get("/frontend/settings/index.html", function (request, response){
     //show this file when the "/" is requested
     response.sendFile(__dirname+"/code/frontend/settings/index.html");
