@@ -33,10 +33,10 @@
           <div> <!-- Section for Settings Menu Options -->
             <h1>Settings Menu</h1><br> <!-- Settings Page Label -->
             <buttons>
-              <ul><a class="current">View User Profile</a></ul>
+              <ul><a href="dark mode.html" class="options">View User Profile</a></ul>
             </buttons>
             <buttons>
-              <ul><a class="options">Edit User Information</a></ul>
+              <ul><a class="current">Edit User Information</a></ul>
             </buttons>
             <buttons>
               <ul><a class="options">Create Original Recipe</a></ul>
@@ -50,21 +50,32 @@
           </div> <!-- End of Settings Meny Options -->
           <div> <!-- Start of View User Profile Area -->
             <h2>User Information</h2><br> <!-- Label -->
-            <registerArea class="boxArea"> <!-- Formatted Area for Name, Username, & Email -->
-                <ul>First Name: Tom</ul> <!-- Note: Don't forget to reflect this from  -->
-                <ul>Last Name: Tester</ul> <!-- Info entered in register / create user area -->
-                <ul>Username: OGPokeSnapper</ul>
-                <ul>Email: tester@gmail.com</ul>
-            </registerArea><br><br><br>
-            <h2>Contact Information</h2><br> <!-- Label -->
-            <registerArea class="boxArea"> <!-- Formatted Arae for Address, City, Country, & Postal Code -->
-              <ul>Address: 123 Long Beach</ul> <!-- Note: Don't forget to reflect this from  -->
-              <ul>City: Long Beach</ul> <!-- Info entered in register / create user area -->
-              <ul>Country: United States</ul>
-              <ul>Postcal Code: 123456</ul>
-            </registerArea><br><br><br>
+            <registerArea class="boxArea"> <!-- Four parts to each area: Two field for both a label & fill-in box -->
+              <ul>First Name </ul>
+              <input type="text" class="box" placeholder="Tom" />
+              <ul>Last Name </ul>
+              <input type="text" class="box" placeholder="Tester" />
+            </registerArea><br><br>
+            <registerArea class="boxArea"> <!-- Second area - second row -->
+              <ul>Username</ul>
+              <input type="text" class="box" placeholder="OGPokeSnapper" />
+              <ul>Email Address</ul>
+              <input type="text" class="box" placeholder="tester@gmail.com" />
+            </registerArea><br><br>
+            <registerArea class="boxArea"> <!-- Four parts to each area: Two field for both a label & fill-in box -->
+              <ul>Address</ul>
+              <input type="text" class="box" placeholder="Address" />
+              <ul>Country</ul>
+              <input type="text" class="box" placeholder="Country" />
+            </registerArea><br><br>
+            <registerArea class="boxArea"> <!-- Second area - second row -->
+              <ul>City</ul>
+              <input type="text" class="box" placeholder="City" />
+              <ul>Post Code</ul>
+              <input type="text" class="box" placeholder="00000" />
+            </registerArea><br><br>
             <buttons> <!-- Button for Deleting User Account -->
-              <button onclick="deleteCheck()" class="accented">Delete Account</button>
+              <button onclick="deleteCheck()" class="accented">Save</button>
             </buttons>
             <p id="test"></p> <!-- Area to see comment with message answer -->
           </div> <!-- End of View Profile Page -->
@@ -81,15 +92,8 @@
 
           // function to check if prompted message to delete account works
           function deleteCheck() {
-            if (confirm("Are you sure you want to delete this account?")) {
-              messageCheck = "Test: Account has been deleted.";
-              // replace this with actual function to delete recipe in database
-            }
-            else {
-              messageCheck = "Test: Account still present.";
-              // basically do nothing here since it's kept in database
-            }
-            document.getElementById("test").innerHTML = messageCheck;
+            alert("Saved!")
+            //document.getElementById("test").innerHTML = messageCheck;
           }
         </script>
     </body>

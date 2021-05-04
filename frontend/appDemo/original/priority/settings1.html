@@ -36,7 +36,7 @@
               <ul><a class="current">View User Profile</a></ul>
             </buttons>
             <buttons>
-              <ul><a class="options">Edit User Information</a></ul>
+              <ul><a href="editUserAcc.html" class="options">Edit User Information</a></ul>
             </buttons>
             <buttons>
               <ul><a class="options">Create Original Recipe</a></ul>
@@ -58,10 +58,10 @@
             </registerArea><br><br><br>
             <h2>Contact Information</h2><br> <!-- Label -->
             <registerArea class="boxArea"> <!-- Formatted Arae for Address, City, Country, & Postal Code -->
-              <ul>Address: 123 Long Beach</ul> <!-- Note: Don't forget to reflect this from  -->
-              <ul>City: Long Beach</ul> <!-- Info entered in register / create user area -->
-              <ul>Country: United States</ul>
-              <ul>Postcal Code: 123456</ul>
+              <ul>Address: -</ul> <!-- Note: Don't forget to reflect this from  -->
+              <ul>City: -</ul> <!-- Info entered in register / create user area -->
+              <ul>Country: -</ul>
+              <ul>Postcal Code: -</ul>
             </registerArea><br><br><br>
             <buttons> <!-- Button for Deleting User Account -->
               <button onclick="deleteCheck()" class="accented">Delete Account</button>
@@ -86,7 +86,7 @@
               // replace this with actual function to delete recipe in database
             }
             else {
-              messageCheck = "Test: Account still present.";
+              messageCheck = "Account still present.";
               // basically do nothing here since it's kept in database
             }
             document.getElementById("test").innerHTML = messageCheck;
