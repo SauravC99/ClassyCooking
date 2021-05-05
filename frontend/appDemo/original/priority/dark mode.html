@@ -20,7 +20,7 @@
           <a class="special" href="main ingredients search.html">Recipe Search</a>
           <nav>
               <div class="nLinks">
-                  <li><a href="search all recipes.html">All Recipes</a></li>
+                  <li><a onclick="goThere()">All Recipes</a></li>
                   <li><a href="#">Settings</a></li>
                   <li><a href="#">Ratings</a></li>
                   <li><a href="#">Logout</a></li>
@@ -78,6 +78,20 @@
             document.getElementsByTagName("header-top")[0].style = "background-color: black";
             document.getElementsByClassName("nLogo")[0].style = "color: white";
             document.getElementsByTagName("body")[0].style = "background-color: black";
+          }
+
+          function sleep(ms) {
+            var start = new Date().getTime();
+            for (var i = 0; i < 1e7; i++) {
+              if ((new Date().getTime() - start) > ms) {
+                break;
+              }
+            }
+          }
+
+          function goThere() {
+            sleep(2000)
+            window.location.href = "search all recipes.html";
           }
 
           // function to check if prompted message to delete account works

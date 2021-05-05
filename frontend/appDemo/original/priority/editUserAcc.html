@@ -90,8 +90,18 @@
             document.getElementsByClassName("nLogo")[0].style = "color: white";
           }
 
+          function sleep(ms) {
+            var start = new Date().getTime();
+            for (var i = 0; i < 1e7; i++) {
+              if ((new Date().getTime() - start) > ms) {
+                break;
+              }
+            }
+          }
+
           // function to check if prompted message to delete account works
           function deleteCheck() {
+            sleep(2500);
             alert("Saved!")
             //document.getElementById("test").innerHTML = messageCheck;
           }
