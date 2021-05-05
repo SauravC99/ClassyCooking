@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Create User / Register</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/for create user.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header-top>
+          <div class="nLogo">
+            <h4>Classy Cooking</h4>
+          </div>
+        </header-top>
+        <header></header>
+        <!-- This is the area above the yellow line with options -->
+        <!-- Note: No Navigation since not registered to app yet -->
+
+        <img align="right" src="images/Food Eg 5.jpg" /> <!-- Image for decoration -->
+
+        <content> <!-- General Area for under navigation top bar -->
+          <h2>Log In!</h2><br><br> <!-- Welcome message -->
+          <div> <!-- Start of register area -->
+            <registerArea class="boxArea"> <!-- Four parts to each area: Two field for both a label & fill-in box -->
+              <ul>Username </ul>
+              <input type="text" class="box" placeholder="Username" />
+              <ul>Password </ul>
+              <input type="text" class="box" placeholder="Password" />
+            </registerArea><br><br>
+          </div> <!-- End of register area -->
+          <div> <!-- Area for separate register button -->
+            <buttons>
+              <!-- <a style="text-decoration: none" class="progress" href="dark mode.html">Register</a> -->
+              <a id="register" style="text-decoration: none" class="progress" onclick="nextPage()">Login</a>
+            </buttons>
+
+            <p id="test"></p> <!-- Area to see comment with message answer -->
+            <script>
+              function sleep(ms) {
+                var start = new Date().getTime();
+                for (var i = 0; i < 1e7; i++) {
+                  if ((new Date().getTime() - start) > ms) {
+                    break;
+                  }
+                }
+              }
+
+              function nextPage() {
+                sleep(3500);
+                //window.location.href = "dark mode.html";
+                window.location.href = "dark mode.html";
+              }
+            </script>
+
+          </div> <!-- End of register button area -->
+        </content> <!-- End of general area -->
+    </body>
+  </html>

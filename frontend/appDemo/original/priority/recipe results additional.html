@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <title>Recipe Results with Additional Ingredients</title>
@@ -71,7 +71,7 @@
 
           <div id="nextOption"> <!-- Section for button to progress to follow recipe -->
             <buttons>
-              <button class="choices" href="recipeResultsAdd.html">Start Cooking</button>
+              <button class="choices" onclick="nextPage()">Start Cooking</button>
             </buttons>
           </div> <!-- End of button section -->
         </content> <!-- End of General Area -->
@@ -97,6 +97,11 @@
             document.getElementsByTagName("content")[0].style = "background-color: black; color: white";
             document.getElementsByTagName("header-top")[0].style = "background-color: black";
             document.getElementsByClassName("nLogo")[0].style = "color: white";
+          }
+
+          function nextPage() {
+            //window.location.href = "dark mode.html";
+            window.location.href = "interactive technique.html";
           }
         </script>
     </body>

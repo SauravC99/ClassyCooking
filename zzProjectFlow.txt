@@ -4,3 +4,19 @@ create user
 settings1
 editUserAcc
 dark mode
+
+search all recipes
+main ingredients search
+additional ingredients search
+recipe results additional
+
+NEED MORE HERE
+
+interactive technique
+interactive timer
+
+NEED MORE HERE
+
+
+
+logOut

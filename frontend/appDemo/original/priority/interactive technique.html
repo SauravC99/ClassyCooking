@@ -40,7 +40,7 @@
           <div> <!-- Section to format previous & next buttons -->
             <buttons>
               <button class="progress">Previous Step</button>
-              <button class="progress">Next Step</button>
+              <button class="progress" onclick="nextPage()">Next Step</button>
             </buttons>
           </div> <!-- End of button formats -->
         </content> <!-- End of General Area -->
@@ -52,6 +52,11 @@
             document.getElementsByTagName("content")[0].style = "background-color: black; color: white";
             document.getElementsByTagName("header-top")[0].style = "background-color: black";
             document.getElementsByClassName("nLogo")[0].style = "color: white";
+          }
+
+          function nextPage() {
+            //window.location.href = "dark mode.html";
+            window.location.href = "interactive timer.html";
           }
         </script>
     </body>
