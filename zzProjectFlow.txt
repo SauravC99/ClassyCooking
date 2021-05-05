@@ -10,13 +10,17 @@ main ingredients search
 additional ingredients search
 recipe results additional
 
-NEED MORE HERE
-
-interactive technique
+interactive technique0
+interactive technique1
+interactive technique2
+interactive technique3
+interactive technique4
+interactive technique5
+interactive technique6
+interactive technique7
 interactive timer
+interactive technique8
 
-NEED MORE HERE
-
-
+search all recipes
 
 logOut

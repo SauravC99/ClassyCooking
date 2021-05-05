@@ -35,13 +35,13 @@
           <h1>Interactive Timer Step</h1> <!-- Interactive Label -->
           <div> <!-- Section to format timer count down -->
             <timerCount id="timer">
-                <center><a>00:25:30</a></center> <!-- centered, current count down value -->
+                <center><a>-</a></center> <!-- centered, current count down value -->
             </timerCount>
           </div> <!-- End of timer format -->
           <div> <!-- Section to format previous & next buttons -->
             <buttons>
-              <button class="progress">Previous Step</button>
-              <button class="progress">Next Step</button>
+              <button class="progress" onclick="prevPage()">Previous Step</button>
+              <button class="progress" onclick="nextPage()">Next Step</button>
             </buttons>
           </div> <!-- End of button formats -->
         </content> <!-- End of General Area -->
@@ -56,7 +56,7 @@
           }
 
           // Set the date we're counting down to
-          var countDownDate = new Date("May 5, 2021 01:13:25").getTime();
+          var countDownDate = new Date("May 5, 2021 00:58:25").getTime();
 
           // Update the count down every 1 second
           var x = setInterval(function() {
@@ -73,6 +73,14 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+            if (days > 1) {
+              document.getElementById("timer").inninnerHTML = days + "d "
+              + hours + "h " + minutes + "m " + seconds + "s ";
+            }
+            if (hours > 1) {
+              document.getElementById("timer").inninnerHTML = hours + "h "
+              + minutes + "m " + seconds + "s ";
+            }
             // Display the result in the element with id="demo"
             document.getElementById("timer").innerHTML = hours + "h "
             + minutes + "m " + seconds + "s ";
@@ -83,6 +91,15 @@
               document.getElementById("timer").innerHTML = "EXPIRED";
             }
           }, 1000);
+
+          function nextPage() {
+            //window.location.href = "dark mode.html";
+            window.location.href = "interactive technique8.html";
+          }
+          function prevPage() {
+            //window.location.href = "dark mode.html";
+            window.location.href = "interactive technique7.html";
+          }
         </script>
     </body>
 </html>
